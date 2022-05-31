@@ -26,12 +26,10 @@ deploy_monitoring:
 	helm -n monitoring install prometheus prometheus-community/kube-prometheus-stack --create-namespace -f helm_chart/custom-prometheus-values.yaml --debug
 
 deploy_app:
-	helm -n monitoring install filemanager helm_chart/ --create-namespace --debug
-
-access_service:
-	kubectl -n monitoring port-forward svc/prometheus-grafana 9080:80
+	helm -n filemanager install filemanager helm_chart/ --create-namespace --debug
 
 clean:
-	helm -n monitoring uninstall filemanager
+	helm -n filemanager uninstall filemanager
 	helm -n monitoring uninstall prometheus
 	${GO_PATH}/bin/kind delete cluster
+

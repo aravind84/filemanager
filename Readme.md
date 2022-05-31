@@ -114,7 +114,13 @@ _- Start some transactions so that the graph will plot if not there will be no d
 _- Change the time range to 5mins or 15mins to see the data clearly. Mostly the default time range for the dashboard imports are 24hrs which is a long time window for visualization._
 
 
-## Incomplete
+#### Interested Metrics:
+
+- JVM metrics are very key to manage the application behavior and tweak them for better performance and resilience.
+- Monitoring K8s cluster nodes and its supporting components are another valuable metrics to understand the capacity of the underlying infra and to run a cost optimized infrastructure.
+- Monitoring the APIs will help to detect and abnormal activity on them like DDoS attacks and mitigate them quickly. 
+
+## Pending
 
 - Alertmanager configuration not done.
 

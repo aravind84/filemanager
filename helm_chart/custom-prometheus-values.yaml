@@ -1,0 +1,18 @@
+prometheus:
+  additionalServiceMonitors:
+  - name: "filemanager-sm"
+    jobLabel: "filemanager_job"
+    selector: 
+      matchLabels:
+        app: filemanager
+        release: prometheus
+    namespaceSelector:
+      matchNames: 
+      - filemanager
+      - monitoring
+    endpoints:
+    - port: http
+      path: /actuator/prometheus
+      interval: 30s
+      scheme: http
+

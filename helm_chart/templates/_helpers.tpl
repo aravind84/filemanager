@@ -48,6 +48,8 @@ Selector labels
 {{- define "filemanager.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "filemanager.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+release: prometheus
+app: filemanager
 {{- end }}
 
 {{/*

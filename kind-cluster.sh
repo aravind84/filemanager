@@ -1,7 +1,6 @@
 #!/bin/sh
 set -o errexit
 
-go install sigs.k8s.io/kind@v0.14.0
 
 # create registry container unless it already exists
 reg_name='kind-registry'

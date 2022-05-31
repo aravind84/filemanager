@@ -31,6 +31,13 @@ This project assume below software/tools are readily available in the local or a
 
 ## Build and Deployment
 
+
+Tips: below command will list all the stages in the make process
+
+```
+make help
+```
+
 The application is built and deployed into local kind cluster via Makefile that exposes different stages as below
 
 
@@ -49,7 +56,6 @@ Once the source code is downloaded to the destination machine run below commands
 cd filemanager
 make
 ```
-
 
 ## How to test the application:
 
@@ -102,6 +108,10 @@ In addition to these dashboards, I've created a simple dashboard which monitors 
 ```
 
 ![/assets/filemanager-dashboard.png]
+
+TIPS: 
+_- Start some transactions so that the graph will plot if not there will be no data shown on the tiles._
+_- Change the time range to 5mins or 15mins to see the data clearly. Mostly the default time range for the dashboard imports are 24hrs which is a long time window for visualization._
 
 
 ## Incomplete
